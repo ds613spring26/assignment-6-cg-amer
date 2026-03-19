@@ -1,0 +1,61 @@
+---
+title: "Assignment 6 (SQL)"
+author: "Clesean Glover"
+format: html
+editor: visual
+---
+
+## Assignment 6 (SQL) Part 1
+
+### Load the necessary packages
+
+```{r}
+install.packages("DBI")
+install.packages("duckdb")
+
+
+library(DBI)
+library(duckdb)
+library(tidyverse)
+
+```
+
+### a. List the first 10 rows
+
+```{r}
+
+
+
+
+
+
+
+```
+
+```{r}
+
+
+
+
+
+
+```
+
+```{r}
+
+
+
+
+
+
+```
+
+```{r}
+
+
+
+
+
+
+
+```
