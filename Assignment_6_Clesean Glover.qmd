@@ -10,8 +10,9 @@ editor: visual
 ### Load the necessary packages
 
 ```{r}
-install.packages("DBI")
-install.packages("duckdb")
+
+#install.packages("DBI")
+#install.packages("duckdb")
 
 
 library(DBI)
@@ -20,35 +21,47 @@ library(tidyverse)
 
 ```
 
+### 
+
+```{r}
+
+conn <- dbConnect(duckdb(),"../data/flights.duckdb")
+
+
+
+
+```
+
 ### a. List the first 10 rows
 
 ```{r}
 
-
+dbGetQuery(conn, "SELECT *
+                  FROM flights
+                  LIMIT 10;")
 
 
 
 
 
 ```
+
+### b. Find the number flights
 
 ```{r}
 
-
-
-
-
-
-```
-
-```{r}
-
-
+dbGetQuery(conn, "SELECT carrier,
+                  COUNT(*) AS NUMBER
+                  FROM flights
+                  GROUP BY carrier
+                  ORDER BY number DESC;")
 
 
 
 
 ```
+
+### c. Find the average departure delay
 
 ```{r}
 

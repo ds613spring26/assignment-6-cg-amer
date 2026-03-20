@@ -5,4 +5,5 @@ LIMIT 10;
 SELECT carrier,
 COUNT(*) AS number
 FROM flights
-GROUP BY carrier;
+GROUP BY carrier
+ORDER BY number DESC;
