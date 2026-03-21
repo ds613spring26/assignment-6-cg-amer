@@ -93,6 +93,36 @@ dbGetQuery(conn, "SELECT dest,
 
 ```
 
+### e. Table showing both the carrier along with the average arrival time
+
+```{r}
+
+dbGetQuery(conn,"SELECT carrier,
+                 AVG(arr_delay) AS mean_arr
+                 FROM flights
+                 GROUP BY carrier
+                 ORDER BY mean_arr DESC;")
+
+
+
+
+```
+
+### Necessary step, disconnect
+
+```{r}
+
+#Once part 1 is complete, we can disconnect. 
+
+dbDisconnect(conn)
+
+
+```
+
+## Part 2 (Running SQL using DBeaver with DuckDB)
+
+### a. List the first 10 rows of the flights tables. 
+
 ```{r}
 
 
@@ -106,7 +136,25 @@ dbGetQuery(conn, "SELECT dest,
 
 
 
-dbDisconnect(conn)
+
+
+
+```
+
+```{r}
+
+
+
+
+
+
+```
+
+```{r}
+
+
+
+
 
 
 ```
