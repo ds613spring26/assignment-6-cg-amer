@@ -65,10 +65,48 @@ dbGetQuery(conn, "SELECT carrier,
 
 ```{r}
 
+dbGetQuery(conn, "SELECT carrier,
+                  AVG (dep_delay) AS ave_dep
+                  FROM flights
+                  GROUP BY carrier;")
+                  
 
 
 
 
+
+```
+
+### d. Find the top 5 destinations
+
+```{r}
+
+dbGetQuery(conn, "SELECT dest,
+           COUNT(*) AS top_five
+           FROM FLIGHTS
+           GROUP BY dest
+           ORDER BY top_five DESC
+           LIMIT 5;")
+
+
+
+
+```
+
+```{r}
+
+
+
+
+
+
+```
+
+```{r}
+
+
+
+dbDisconnect(conn)
 
 
 ```
