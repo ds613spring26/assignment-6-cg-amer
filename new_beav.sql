@@ -7,3 +7,4 @@ COUNT(*) AS number
 FROM flights
 GROUP BY carrier
 ORDER BY number DESC;
+

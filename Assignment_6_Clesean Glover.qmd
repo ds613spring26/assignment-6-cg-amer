@@ -97,11 +97,11 @@ dbGetQuery(conn, "SELECT dest,
 
 ```{r}
 
-dbGetQuery(conn,"SELECT carrier,
-                 AVG(arr_delay) AS mean_arr
-                 FROM flights
-                 GROUP BY carrier
-                 ORDER BY mean_arr DESC;")
+dbGetQuery(conn, "SELECT carrier,
+                  AVG(arr_delay) AS mean_arr
+                  FROM flights
+                  GROUP BY carrier
+                  ORDER BY mean_arr DESC;")  
 
 
 
@@ -121,40 +121,49 @@ dbDisconnect(conn)
 
 ## Part 2 (Running SQL using DBeaver with DuckDB)
 
-### a. List the first 10 rows of the flights tables. 
+### a. List the first 10 rows of the flights tables.
 
 ```{r}
 
+knitr::include_graphics("Image 1.png")
 
+knitr::include_graphics("Image 2.png")
 
+knitr::include_graphics("Image 3.png")
 
+knitr::include_graphics("Image 4.png")
+
+```
+
+### b. Count the number of flights for each carrier
+
+```{r}
+
+knitr::include_graphics("Image 5.png")
+
+knitr::include_graphics("Image 6.png")
 
 
 ```
 
+### c. Find the average departure by month
+
 ```{r}
 
+knitr::include_graphics("Image 7.png")
 
-
-
+knitr::include_graphics("Image 8.png")
 
 
 ```
 
-```{r}
-
-
-
-
-
-
-```
+### d. Find the top 10 routes (dest) by origin and dest
 
 ```{r}
 
+knitr::include_graphics("Image 9.png")
 
-
-
+knitr::include_graphics("Image 10.png")
 
 
 ```
