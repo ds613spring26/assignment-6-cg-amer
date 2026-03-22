@@ -221,22 +221,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="st">                  GROUP BY carrier;"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   carrier   ave_dep
-1       AA  8.586016
-2       EV 19.955390
-3       US  3.782418
-4       9E 16.725769
-5       YV 18.996330
-6       WN 17.711744
-7       AS  5.804775
-8       F9 20.215543
-9       OO 12.586207
-10      UA 12.106073
-11      MQ 10.552041
-12      VX 12.869421
-13      B6 13.022522
-14      DL  9.264505
-15      FL 18.726075
-16      HA  4.900585</code></pre>
+1       WN 17.711744
+2       AS  5.804775
+3       F9 20.215543
+4       OO 12.586207
+5       AA  8.586016
+6       EV 19.955390
+7       US  3.782418
+8       9E 16.725769
+9       YV 18.996330
+10      FL 18.726075
+11      HA  4.900585
+12      UA 12.106073
+13      MQ 10.552041
+14      VX 12.869421
+15      B6 13.022522
+16      DL  9.264505</code></pre>
 </div>
 </div>
 </section>
@@ -266,7 +266,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="st">                  AVG(arr_delay) AS mean_arr</span></span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="st">                  FROM flights</span></span>
 <span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="st">                  GROUP BY carrier</span></span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="st">                  ORDER BY mean_arr DESC;"</span>)  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="st">                  ORDER BY mean_arr DESC;"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   carrier   mean_arr
 1       F9 21.9207048
